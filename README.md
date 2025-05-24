@@ -45,17 +45,21 @@ Example `alias.json` structure:
 
 ```json
 {
-  "aliases": {
-    "word_to_replace": "replacement_pronunciation",
-    "another_word": "another_replacement"
-  },
-  "voice_settings": {
-    "language_code": "en-US",
-    "name": "en-US-Wavenet-D",
-    "speaking_rate": 1.0
+    "config": {
+      "rate": "110%",
+      "voice": "es-ES-Standard-G"
+    },
+    "alias": {
+      "google": {  
+        "alias": "Gu gel"
+      },
+    }
   }
-}
 ```
+Replace in this case "google" by the word to search in the srt file. And in the "alias" add the pronunciation.
+
+You can add SSML commands:  https://cloud.google.com/text-to-speech/docs/ssml
+ 
 
 ## Google Cloud Setup
 
