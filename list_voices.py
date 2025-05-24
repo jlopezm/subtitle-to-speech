@@ -20,5 +20,13 @@ def list_filtered_voices(creds_path):
             print(f"Sample rate: {voice.natural_sample_rate_hertz} Hz")
             print("-" * 40)
 
-# USAGE
-list_filtered_voices("text-to-speech-458615-a2dff9bddeaa.json")
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description="List available voices from Google Cloud Text-to-Speech, filtered by language.")
+    parser.add_argument("--creds_path", required=True, help="Path to the Google Cloud service account JSON key file.")
+    args = parser.parse_args()
+    list_filtered_voices(args.creds_path)
+
+if __name__ == "__main__":
+    main()
